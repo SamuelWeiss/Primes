@@ -1,0 +1,33 @@
+Primes
+
+SamuelWeiss
+
+At time of writing I've made two different approaches to finding prime numbers, one of them is multithreaded, however it is unable to share memory between threads and therefore must rely on an inefficient way of checking for primes.
+
+The second approach is single threaded, but allows for more intelligent memory usage. The single threaded program allows for found prime numbers to be used to find new primes more intelligently.
+
+
+Here is a performance chart comparing the two algorithms:
+
+
+----- System Data -----
+System: Macbook air, mid 2011
+CPU: 1.7 GHz intel core i5 - 2 cores, 4 threads
+RAM: 4GB 1333 MHz DDR3
+OS: OS X 10.9.5
+
+multithreaded tests use 8 threads
+
+####################################################################
+#    Number of primes   #   Single threaded   #   multi threaded   #
+# ----------------------#---------------------#--------------------#
+#        1000           #       .106s         #                    #
+# ----------------------#---------------------#--------------------#
+#        10000          #       .247s         #
+# ----------------------#---------------------#--------------------#
+#        100000         #     10.931s         #
+# ----------------------#---------------------#--------------------#
+#        1000000        #
+# ----------------------#---------------------#--------------------#
+#        10000000       #
+###################################################################
